@@ -1,5 +1,5 @@
 <div *ngIf="images && images.length > 0" class="carousel-container">
-    <div class="portfolio-box"></div>
+    <div class="portfolio-box2"></div>
     <img *ngFor="let image of images; let i=index" 
         [src]="image.imageSrc" alt="image.imageAlt"
         [ngClass]="{'image-active': selectedIndex == i}"
