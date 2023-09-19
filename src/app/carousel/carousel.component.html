@@ -1,5 +1,4 @@
 <div *ngIf="images && images.length > 0" class="carousel-container">
-    <div class="portfolio-box2"></div>
     <img *ngFor="let image of images; let i=index" 
         [src]="image.imageSrc" alt="image.imageAlt"
         [ngClass]="{'image-active': selectedIndex == i}"
@@ -12,6 +11,7 @@
         </div>  
         <div class="portfolio-sci2">
             <i><img class="ai" src="./assets/adobe-illustrator.png" alt=""></i>
+        </div>
     </div>
 
     <div *ngIf="indicators" class="carousel-dot-container">
