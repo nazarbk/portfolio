@@ -1,0 +1,25 @@
+<div *ngIf="images && images.length > 0" class="carousel-container">
+    <div class="portfolio-box"></div>
+    <img *ngFor="let image of images; let i=index" 
+        [src]="image.imageSrc" alt="image.imageAlt"
+        [ngClass]="{'image-active': selectedIndex == i}"
+        class="fade"
+    >
+    <div class="portfolio-layer">
+        <h3>Dibujos</h3>
+        <div class="portfolio-sci">
+          <a href="https://malnini.web.app/home"><i class='bx bx-link-external'></i></a>
+        </div>  
+        <div class="portfolio-sci2">
+            <i><img class="ai" src="./assets/adobe-illustrator.png" alt=""></i>
+    </div>
+
+    <div *ngIf="indicators" class="carousel-dot-container">
+        <span *ngFor="let dot of images; let i=index" 
+            class="dot"
+            [ngClass]="{'active': selectedIndex === i}"
+            (click)="selectedImage(i)"
+        >
+        </span>
+    </div>
+</div>
